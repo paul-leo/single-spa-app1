@@ -28,8 +28,8 @@ specifiers:
   jest-cli: ^27.5.1
   prettier: ^2.3.2
   pretty-quick: ^3.1.1
-  react: ^18.0.0
-  react-dom: ^18.0.0
+  react: ^19.0.0
+  react-dom: ^19.0.0
   single-spa: ^5.9.3
   single-spa-react: ^6.0.2
   ts-config-single-spa: ^3.0.0
@@ -46,10 +46,10 @@ dependencies:
   '@types/react-dom': 17.0.26_@types+react@17.0.83
   '@types/systemjs': 6.15.1
   '@types/webpack-env': 1.18.5
-  react: 18.3.1
-  react-dom: 18.3.1_react@18.3.1
+  react: 19.0.0
+  react-dom: 19.0.0_react@19.0.0
   single-spa: 5.9.5
-  single-spa-react: 6.0.2_ykhjyxmksln2emkr62ilutgjci
+  single-spa-react: 6.0.2_7renuaw7jd3bgpwq3f4pq2tcpi
 
 devDependencies:
   '@babel/core': 7.26.0
@@ -60,7 +60,7 @@ devDependencies:
   '@babel/preset-typescript': 7.26.0_@babel+core@7.26.0
   '@babel/runtime': 7.26.0
   '@testing-library/jest-dom': 5.17.0
-  '@testing-library/react': 12.1.5_tst2squlq7prqngfy5ckefbd2e
+  '@testing-library/react': 12.1.5_yhixqtpfjnmonqpdw6d6dpluqq
   babel-jest: 27.5.1_@babel+core@7.26.0
   concurrently: 6.5.1
   cross-env: 7.0.3
@@ -1768,7 +1768,7 @@ packages:
       redent: 3.0.0
     dev: true
 
-  /@testing-library/react/12.1.5_tst2squlq7prqngfy5ckefbd2e:
+  /@testing-library/react/12.1.5_yhixqtpfjnmonqpdw6d6dpluqq:
     resolution: {integrity: sha512-OfTXCJUFgjd/digLUuPxa0+/3ZxsQmE7ub9kcbW/wi96Bh3o/p5vrETcBGfP17NWPGqeYYl5LTRpwyGoMC4ysg==}
     engines: {node: '>=12'}
     peerDependencies:
@@ -1778,8 +1778,8 @@ packages:
       '@babel/runtime': 7.26.0
       '@testing-library/dom': 8.20.1
       '@types/react-dom': 17.0.26_@types+react@17.0.83
-      react: 18.3.1
-      react-dom: 18.3.1_react@18.3.1
+      react: 19.0.0
+      react-dom: 19.0.0_react@19.0.0
     transitivePeerDependencies:
       - '@types/react'
     dev: true
@@ -5243,6 +5243,7 @@ packages:
 
   /js-tokens/4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
+    dev: true
 
   /js-yaml/3.14.1:
     resolution: {integrity: sha512-okMH7OXXJ7YrN9Ok3/SXrnu4iX9yOk+25nqX4imS2npuvTYDmo/QEZoqwZkYaIDk3jVvBOTOIEgEhaLOynBS9g==}
@@ -5437,12 +5438,6 @@ packages:
   /lodash/4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
     dev: true
-
-  /loose-envify/1.4.0:
-    resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
-    hasBin: true
-    dependencies:
-      js-tokens: 4.0.0
 
   /lower-case/2.0.2:
     resolution: {integrity: sha512-7fm3l3NAF9WfN6W3JOmf5drwpVqX78JtoGJ3A6W0a6ZnldM41w2fV5D490psKFTpMds8TJse/eHLFFsNHHjHgg==}
@@ -6073,23 +6068,20 @@ packages:
       unpipe: 1.0.0
     dev: true
 
-  /react-dom/18.3.1_react@18.3.1:
-    resolution: {integrity: sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==}
+  /react-dom/19.0.0_react@19.0.0:
+    resolution: {integrity: sha512-4GV5sHFG0e/0AD4X+ySy6UJd3jVl1iNsNHdpad0qhABJ11twS3TTBnseqsKurKcsNqCEFeGL3uLpVChpIO3QfQ==}
     peerDependencies:
-      react: ^18.3.1
+      react: ^19.0.0
     dependencies:
-      loose-envify: 1.4.0
-      react: 18.3.1
-      scheduler: 0.23.2
+      react: 19.0.0
+      scheduler: 0.25.0
 
   /react-is/17.0.2:
     resolution: {integrity: sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==}
 
-  /react/18.3.1:
-    resolution: {integrity: sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==}
+  /react/19.0.0:
+    resolution: {integrity: sha512-V8AVnmPIICiWpGfm6GLzCR/W5FXLchHop40W4nXBmdlEceh16rCN8O8LNWm5bh5XUX91fh7KpA+W0TgMKmgTpQ==}
     engines: {node: '>=0.10.0'}
-    dependencies:
-      loose-envify: 1.4.0
 
   /readable-stream/2.3.8:
     resolution: {integrity: sha512-8p0AUk4XODgIewSi0l8Epjs+EVnWiK7NoDIEGU0HhE7+ZyY8D1IMY7odu5lRrFXGg71L15KG8QrPmum45RTtdA==}
@@ -6326,10 +6318,8 @@ packages:
       xmlchars: 2.2.0
     dev: true
 
-  /scheduler/0.23.2:
-    resolution: {integrity: sha512-UOShsPwz7NrMUqhR6t0hWjFduvOzbtv7toDH1/hIrfRNIDBnnBWd0CwJTGvTpngVlmwGCdP9/Zl/tVrDqcuYzQ==}
-    dependencies:
-      loose-envify: 1.4.0
+  /scheduler/0.25.0:
+    resolution: {integrity: sha512-xFVuu11jh+xcO7JOAGJNOXld8/TcEHK/4CituBUeUb5hqxJLj9YuemAEuvm9gQ/+pgXYfbQuqAkiYu+u7YEsNA==}
 
   /schema-utils/2.7.1:
     resolution: {integrity: sha512-SHiNtMOUGWBQJwzISiVYKu82GiV4QYGePp3odlY1tuKO7gPtphAT5R/py0fA6xtbgLL/RvtJZnU9b8s0F1q0Xg==}
@@ -6534,7 +6524,7 @@ packages:
     resolution: {integrity: sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==}
     dev: true
 
-  /single-spa-react/6.0.2_ykhjyxmksln2emkr62ilutgjci:
+  /single-spa-react/6.0.2_7renuaw7jd3bgpwq3f4pq2tcpi:
     resolution: {integrity: sha512-nRz5Izf57iYZXMXdTh+RmHnxxQojFL8NCIVUyA7PpXRib1ykmbat6JgT3yFPgXRs129BCC4+j+O5TLQOmLzF4Q==}
     peerDependencies:
       '@types/react': '*'
@@ -6549,7 +6539,7 @@ packages:
       '@types/react': 17.0.83
       '@types/react-dom': 17.0.26_@types+react@17.0.83
       browserslist-config-single-spa: 1.0.1
-      react: 18.3.1
+      react: 19.0.0
     dev: false
 
   /single-spa/5.9.5:

@@ -1,0 +1,51 @@
+name: Build and Test
+
+on:
+  push:
+    branches: main
+  pull_request:
+    branches: "*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 7.26.0
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run build
+      - run: pnpm test
+      # Add any other checks here
+      # - run: pnpm run check-format
+      # - run: pnpm run lint
+      - name: Store build artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: static-assets
+          path: dist
+
+  deploy-dev:
+    needs: build
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment: dev
+    steps:
+      - name: Download static assets
+        uses: actions/download-artifact@v3
+        with:
+          name: static-assets
+          path: dist
+      - uses: ConvexCooperative/baseplate-deploy-action@v2.0.0
+        with:
+          baseplate-token: ${{ secrets.BASEPLATE_TOKEN }}
+          microfrontend-name: "app1"
+          environment-name: dev
+          upload-dir: dist
+          entry-file: nore-micro-app1.js
+          auto-version: true
